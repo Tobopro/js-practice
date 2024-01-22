@@ -26,8 +26,8 @@ class Account {
         let targetElement = document.querySelector('.solde__value');
         if (targetElement) {
             targetElement.innerHTML = messageAmount;
-        }
 
+        }
     }
 
     sayLastAction() {
@@ -41,10 +41,11 @@ class Account {
 }
 
 
-
+let allDeposits = 0;
 function addDeposit() {
     const inputDeposit = document.querySelector('.form__input--deposit-amount');
     const deposit = inputDeposit.value;
+    allDeposits += parseInt(deposit);
     account.currentAmount = account.currentAmount + parseInt(deposit);
     targetElement = document.querySelector('.movements');
     messageAmount = `<div class="movements__row">
@@ -80,6 +81,7 @@ targetFormDeposit.addEventListener('submit', function (e) {
     console.log(this.currentAmount);
     account.sayAmount();
 
+
 })
 
 const targetFormWithdrawal = document.querySelector('.form--withdrawal')
@@ -93,7 +95,7 @@ targetFormWithdrawal.addEventListener('submit', function (e) {
 
 
 
-let account = new Account('Tom', 'Boyer', 3800, '22/01/2024');
+let account = new Account('Tom', 'Boyer', 0, '22/01/2024');
 account.sayHello();
-
+account.sayAmount();
 account.sayLastAction();
