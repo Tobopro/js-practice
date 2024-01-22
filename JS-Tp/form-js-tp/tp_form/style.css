@@ -1,0 +1,144 @@
+:root {
+  --color-red: #ff7a7a;
+  --color-green: #38cc8c;
+  --color-purple: #6055a5;
+  --color-gray: #3e3c49;
+  --color-blue-light: #b9b6d3;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 1.6rem;
+  color: #444;
+  line-height: 1.9;
+  background-image: url(./images/bg-intro-desktop.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: var(--color-red);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+
+
+.container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-content: center;
+  justify-items: center;
+  grid-gap: 3rem;
+  height: 100%;
+  max-width: 108rem;
+  width: 100%;
+
+
+
+}
+
+.title:active {
+  transition: all 10s;
+  transform: translate(-250px, -350px);
+}
+
+
+
+.text-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  max-width: 50rem;
+  width: 100%;
+}
+
+.title {
+  font-size: 4rem;
+  color: #fff;
+  line-height: 5rem;
+  margin-bottom: 3rem;
+}
+
+.text {
+  color: #fff;
+}
+
+.form {
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  max-width: 50rem;
+  width: 100%;
+  padding: 3rem;
+  border-radius: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2.5rem;
+  position: relative;
+}
+
+.form__input {
+  height: 4.5rem;
+  border-radius: 0.5rem;
+  border: solid 1px var(--color-blue-light);
+  padding-left: 2rem;
+  font-size: inherit;
+  outline: none;
+  font-weight: 600;
+  color: var(--color-gray);
+}
+
+.form__input::placeholder {
+  font-weight: normal;
+  color: var(--color-blue-light);
+}
+
+.term {
+  font-size: 1.3rem;
+}
+
+.red-text {
+  color: var(--color-red);
+  font-weight: bold;
+  border: 1px solid red;
+}
+
+.green-text {
+  color: var(--color-green);
+  font-weight: bold;
+  border: 1px solid green;
+}
+
+.form__btn {
+  border: none;
+  background-color: var(--color-green);
+  color: #000000;
+  height: 5.5rem;
+  font-size: 1.8rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border-bottom: solid 3px var(--color-green-dark);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.form__btn:hover {
+  transform: translate(-250px, -350px);
+  transition: all 10s;
+
+}
